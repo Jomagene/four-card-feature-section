@@ -1,0 +1,7 @@
+*.sketch
+*.xd
+*.fig
+.DS_Store
+styles/*.css
+styles/*.css.map
+!styles/style.css
