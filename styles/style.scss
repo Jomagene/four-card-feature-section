@@ -11,6 +11,7 @@ $very-light-gray: hsl(0, 0%, 98%);
 $shadow: rgba(96, 156, 184, 0.2) 0px 20px 16px -5px,
   $very-light-gray 0px 4px 6px -2px;
 
+// Mixins
 @mixin set-grid-area($row-start, $column-start) {
   grid-area: #{$row-start}/#{$column-start}/ span 2;
 }
@@ -26,13 +27,6 @@ $shadow: rgba(96, 156, 184, 0.2) 0px 20px 16px -5px,
   }
 }
 
-body {
-  font-size: 0.8125rem;
-  font-weight: 400;
-  font-family: "Poppins";
-  color: $very-dark-blue;
-  background-color: $very-light-gray;
-}
 // Some utility classes
 .flex {
   display: flex;
@@ -59,6 +53,14 @@ body {
   text-align: center;
 }
 
+// Base classes
+body {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  font-family: "Poppins";
+  color: $very-dark-blue;
+  background-color: $very-light-gray;
+}
 h1 {
   font-weight: 200;
   font-size: 2.1875rem;
@@ -80,6 +82,7 @@ p {
 
 main {
   min-height: 57.625rem;
+  margin: 2.5rem 1.25rem;
   .title-container {
     max-width: 33.75rem;
     p {
@@ -125,7 +128,12 @@ main {
   }
 }
 
+// Media querry
+
 @media (min-width: 42.5rem) {
+  main {
+    margin: 0 1.25rem;
+  }
   .articles-section {
     grid-template: repeat(4, 1fr) / repeat(3, 1fr);
     .builder {
