@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My solution Url](https://your-solution-url.com)
+- Solution URL: [My solution Url](https://www.frontendmentor.io/solutions/responsive-four-card-feature-section-using-sass-grid-and-flex-box-lay-3etg4Un1yt)
 - Live Site URL: [Four card section](https://jomagene.github.io/four-card-feature-section/)
 
 ## My process
