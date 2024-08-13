@@ -1,0 +1,69 @@
+@import "reset";
+
+// My variables
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+@mixin set-grid-area($row-start, $column-start) {
+  grid-area: #{$row-start}/#{$column-start}/ span 2;
+}
+
+// Some utility classes
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+
+.articles-section {
+  max-width: fit-content;
+}
+
+article {
+  padding: 40px;
+  max-width: 240px;
+  min-height: 170px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.articles-section {
+  row-gap: 36px;
+  column-gap: 36px;
+}
+
+@media (min-width: 680px) {
+  .articles-section {
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    .builder {
+      @include set-grid-area(1, 2);
+    }
+    .karma {
+      @include set-grid-area(3, 2);
+    }
+    .supervisor {
+      @include set-grid-area(2, 1);
+    }
+    .calculator {
+      @include set-grid-area(2, 3);
+    }
+  }
+}
