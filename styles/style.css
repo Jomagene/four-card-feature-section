@@ -30,12 +30,23 @@ h2 {
   isolation: isolate;
 }
 
+body {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Poppins";
+  color: hsl(234, 12%, 34%);
+}
+
 .flex {
   display: flex;
 }
 
 .grid {
   display: grid;
+}
+
+.column {
+  flex-direction: column;
 }
 
 .justify-center {
@@ -46,31 +57,104 @@ h2 {
   justify-content: space-between;
 }
 
-.align-center {
+.items-center {
   align-items: center;
 }
 
-.align-end {
+.items-end {
   align-items: flex-end;
 }
 
-.articles-section {
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  padding-bottom: 40px;
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 13px;
+  color: hsl(229, 6%, 66%);
+}
+
+main {
+  min-height: 922px;
+}
+main .title-container {
+  max-width: 540px;
+}
+main .title-container p {
+  font-size: 16px;
+}
+main .articles-section {
+  row-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
-
-article {
-  padding: 40px;
-  max-width: 240px;
-  min-height: 170px;
-  border-radius: 10px;
+main .articles-section article {
+  padding: 30px;
+  max-width: 350px;
+  min-height: 250px;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  overflow: hidden;
+  position: relative;
 }
-
-.articles-section {
-  row-gap: 36px;
-  -moz-column-gap: 36px;
-       column-gap: 36px;
+main .articles-section article.supervisor div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: hsl(180, 62%, 55%);
+}
+main .articles-section article.builder div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: hsl(0, 78%, 62%);
+}
+main .articles-section article.karma div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: hsl(34, 97%, 64%);
+}
+main .articles-section article.calculator div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: hsl(212, 86%, 64%);
+}
+main .articles-section article p {
+  line-height: 1.8;
 }
 
 @media (min-width: 680px) {

@@ -17,38 +17,47 @@
     <title>Frontend Mentor | Four card feature section</title>
   </head>
   <body>
-    <main>
-      <section>
-        <h1>Reliable, efficient delivery</h1>
-        <h2>Powered by Technology</h2>
-        <p>
+    <main class="flex column items-center justify-center">
+      <section class="title-container">
+        <h1 class="text-center">Reliable, efficient delivery</h1>
+        <h2 class="text-center">Powered by Technology</h2>
+        <p class="text-center">
           Our Artificial Intelligence powered tools use millions of project data
           points to ensure that your project is successful
         </p>
       </section>
       <section class="grid articles-section">
-        <article class="supervisor">
-          <h3>Supervisor</h3>
-          <p>Monitors activity to identify project roadblocks</p>
+        <article class="supervisor flex column items-end justify-between">
+          <div>
+            <h3>Supervisor</h3>
+            <p>Monitors activity to identify project roadblocks</p>
+          </div>
           <img src="./images/icon-supervisor.svg" alt="icon supervisor" />
         </article>
-        <article class="builder">
-          <h3>Team Builder</h3>
-          <p>
-            Scans our talent network to create the optimal team for your project
-          </p>
+        <article class="builder flex column items-end justify-between">
+          <div>
+            <h3>Team Builder</h3>
+            <p>
+              Scans our talent network to create the optimal team for your
+              project
+            </p>
+          </div>
           <img src="./images/icon-team-builder.svg" alt="icon team builder" />
         </article>
-        <article class="karma">
-          <h3>Karma</h3>
-          <p>Regularly evaluates our talent to ensure quality</p>
+        <article class="karma flex column items-end justify-between">
+          <div>
+            <h3>Karma</h3>
+            <p>Regularly evaluates our talent to ensure quality</p>
+          </div>
           <img src="./images/icon-karma.svg" alt="icon karma" />
         </article>
-        <article class="calculator">
-          <h3>Calculator</h3>
-          <p>
-            Uses data from past projects to provide better delivery estimates
-          </p>
+        <article class="calculator flex column items-end justify-between">
+          <div>
+            <h3>Calculator</h3>
+            <p>
+              Uses data from past projects to provide better delivery estimates
+            </p>
+          </div>
           <img src="./images/icon-calculator.svg" alt="icon calculator" />
         </article>
       </section>
