@@ -29,6 +29,7 @@ body {
   font-weight: 400;
   font-family: "Poppins";
   color: $very-dark-blue;
+  background-color: $very-light-gray;
 }
 // Some utility classes
 .flex {
@@ -58,19 +59,21 @@ body {
 
 h1 {
   font-weight: 200;
-  font-size: 36px;
+  font-size: 35px;
+  padding-bottom: 2px;
 }
 h2 {
   font-size: 36px;
   font-weight: 600;
+  line-height: 1.2;
 }
 h3 {
-  font-size: 18px;
+  font-size: 19.6px;
   font-weight: 600;
 }
 p {
-  padding-bottom: 40px;
-  padding-top: 10px;
+  padding-bottom: 63px;
+  padding-top: 22px;
   font-weight: 400;
   font-size: 13px;
   color: $grayish-blue;
@@ -81,7 +84,8 @@ main {
   .title-container {
     max-width: 540px;
     p {
-      font-size: 16px;
+      font-size: 15.5px;
+      line-height: 1.6;
     }
   }
 
@@ -90,12 +94,13 @@ main {
     column-gap: 30px;
     max-width: fit-content;
     article {
-      padding: 30px;
+      padding: 32px;
       max-width: 350px;
       min-height: 250px;
       border-radius: 5px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+      box-shadow: rgba(96, 156, 184, 0.2) 0px 20px 16px -5px,
+        $very-light-gray 0px 4px 6px -2px;
+      background-color: white;
       overflow: hidden;
       position: relative;
       &.supervisor {
@@ -111,7 +116,9 @@ main {
         @include set-top-line($blue);
       }
       p {
-        line-height: 1.8;
+        line-height: 1.75;
+        padding-top: 8.5px;
+        padding-bottom: 0px;
       }
     }
   }
